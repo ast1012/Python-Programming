@@ -1,0 +1,18 @@
+import random
+print("      %%%%%%%%%%%%%%%%%%%____  WELCOME TO GUESS THE NUMBER GAME  ____%%%%%%%%%%%%%%%%%%%       ")
+n = random.randint(1,100)
+life=10
+for i in range(life):
+    ch = int(input("What do you think the number will be?\n"))
+    if ch>n:
+        print("You guessed a greater number. Go a bit down\n")
+    elif ch<n:
+        print("You guessed a smaller number. Go a bit up\n")
+    elif ch==n:
+        print("_________________  %%%%%%%%%%    Hurrayyyyyy! You won !      %%%%%%%%%  ______________")
+        print("Congratulations ! You have guessed the number in",i,"chances")
+        break
+if no_chances > life-1-i:
+    print(no_chances,"number of chances left !")      
+elif no_chances==0:
+    print("You are out of life!!!!!!!\n   Game Over")
