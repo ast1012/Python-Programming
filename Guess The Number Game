@@ -12,7 +12,8 @@ for i in range(life):
         print("_________________  %%%%%%%%%%    Hurrayyyyyy! You won !      %%%%%%%%%  ______________")
         print("Congratulations ! You have guessed the number in",i,"chances")
         break
-if no_chances > life-1-i:
-    print(no_chances,"number of chances left !")      
-elif no_chances==0:
-    print("You are out of life!!!!!!!\n   Game Over")
+    no_chances = life-1-i
+    if no_chances > 0:
+        print(no_chances,"number of chances left !\n\n")      
+    elif no_chances==0:
+        print("You are out of life!!!!!!!\n   Game Over")
