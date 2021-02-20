@@ -1,0 +1,13 @@
+print("          %%%%%%%%%%%%%%%%   WELCOME TO PRINTING PATTEREN GAME    %%%%%%%%%%%%%%%                ")
+n = int(input("Enter the number of rows you want to print"))
+b = int(input("Enter the boolean pattern you want to print: 0 OR 1 :---->"))
+if bool(b) == True:
+    for i in range(n):
+        for j in range(0,i+1):
+            print("*", end=" ")
+        print("\r")
+elif bool(b) == False:
+    for i in range(n):
+        for j in range(0,n-i):
+            print("*", end=" ")
+        print("\r")
