@@ -1,0 +1,56 @@
+print("      %%%%%%%%%%%%%%%%%%   ---- WELCOME TO HEALTH RECORD MANAGEMENT  ----  %%%%%%%%%%%%%%%%%    ")
+def today():
+    from datetime import datetime
+    now = datetime.now()
+    string = now.strftime("%d/%m/%y")
+    t = now.strftime("%H:%M")
+    print("Today's Date: ",string) 
+    print("Time is: ",t) 
+def exercise():
+    today()
+    name = input("Enter your name: -->")
+    add = input("Enter what you want to add: -->  ")
+    with open("exercise.txt","a") as f:
+        file = ["[",today(),"]",name,add,"\n"]
+        for i in file:
+            f.write("%s" %i)
+        print("Exercise added sucessfully")
+def diet():
+        today()
+        name = input("Enter your name: -->")
+        add = input("Enter what you want to add: -->  ")
+        with open("diet.txt","a") as f:
+                file = ["[",today(),"]",name,add,"\n"]
+                for i in file:
+                    f.write("%s" %i)
+                print("Diet added successfully")
+def read():
+    a = int(input("Which file you want to delete? 1] Exercise \n 2] Diet\n"))
+    if a==1:
+        with open("diet.txt","r") as f:
+            n = f.read()
+            print(n)
+    elif a==2:
+        with open("exercise.txt","r") as f:
+            n = f.read()
+            print(n)
+def clear():
+    a = int(input("Which file you want to delete? 1] Exercise \n 2] Diet"))
+    if a==1:
+        with open("diet.txt","w") as f:
+            f.truncate(0)
+            print(" File cleared successfully")
+    elif a==2:
+        with open("exercise.txt","w") as f:
+            f.truncate(0)
+            print("File cleared successfully ")
+        
+ch = int(input("Enter what do you want to record: \n 1] Diet \n 2] Exercise \n 3] Read \n 4] Clear\n"))
+if ch==1:
+    diet()
+elif ch==2:
+    exercise()
+elif ch==3:
+    read()
+elif ch==4:
+    clear()
