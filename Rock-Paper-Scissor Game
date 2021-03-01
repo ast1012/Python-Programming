@@ -1,0 +1,49 @@
+import random
+print("       *****************_____  WELCOME TO ROCK-PAPER-SCISSOR GAME  _____*****************")
+print("                   You will be awarded '5' points each time you win ") 
+print("                                      All the best ;)   \n ")
+lst = ['Rock','Paper','Scissor']
+c = random.choice(lst)
+comp , player = 0 ,0
+for i in range(10):
+    print("Enter your choice: \n 1} Rock \n 2} Paper \n 3} Scissor \n 4} Exit")
+    user = input("----->")
+    print("Computer Choice: ---> ",c)
+    if user == "Rock" and c == "Rock":
+            print("  Ohhh...Nooo.....It's a tie ! \n Try Again")
+    elif user == "Rock"and c == "Scissor":
+            print("   Hurray..! ******You Won ******")
+            player = player+5
+    elif user == "Rock" and c == "Paper" :
+            print("   Hurray...!******   Computer Won XD ******\n Hope next is You :D")
+            comp = comp+5
+    elif user == "Scissor" and c == "Scissor":
+            print("  Ohhh...Nooo.....It's a tie ! \n Try Again  ")
+    elif user == "Scissor" and c == "Paper":
+            print("   Hurray..! ******You Won ******")
+            player = player+5
+    elif user == "Scissor" and c == "Rock":
+            print("   Hurray...!******   Computer Won XD  ******\n Hope next is You :D")
+            comp = comp+5
+    elif user== "Paper" and c == "Paper":
+            print("  Ohhh...Nooo.....It's a tie ! \n Try Again")
+    elif user== "Paper" and c == "Rock":
+            print("   Hurray..! ******You Won ******")
+            player = player+5
+    elif user== "Paper"and c == "Scissor":
+            print("  ^^^^^^^^^^  Computer Won  ^^^^^^^^^^  \n Hope next is You :D" )
+            comp = comp+5
+    elif user=="Exit":
+        break
+    else:
+        print("Enter a valid choice")
+    print("  \n Number of turns left:  ",10-i-1)
+print("                                         Your Score: --> ",player)
+print("                                        Computer's Score: --> ",comp)
+if player > comp:
+    print("                                    ------Congralutations------  ")
+    print("                                 ******  You are the winner  ******")
+elif comp> player:
+    print("                             Hurray...!******   Computer Won XD  ******   ")
+else:
+    print("                           Ohhh...Nooo.....It's a tie ! \n Better Luck Next Time")
