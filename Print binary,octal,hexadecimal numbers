@@ -1,0 +1,19 @@
+print("                                %%%%%%%%%%  Welcome %%%%%%%%%                  ")
+print("                 Print octal, binary or hexadecimal of the number you need      ")
+n = int(input("Enter your number: -->  "))
+print("Press 1 if you want to print octal number")
+print("Press 2 if you want to print hexadecimal number")
+print("Press 3 if you want to print binary number")
+print("Press 4 if you want to print all 3 number")
+ch = int(input("-->  "))
+if ch==1:
+    print("The octal of {} is {}".format(n, oct(n)[2:]))
+elif ch==2:
+    print("The hexadecimal of {} is {}".format(n, hex(n)[2:]))
+elif ch==3:
+    print("The binary of {} is {}".format(n,bin(n)[2:]))
+elif ch==4:
+    print("The octal of {} is {}".format(n,oct(n)[2:]))
+    print("The hexadecimal of {} is {}".format(n,hex(n)[2:]))
+    print("The binary of {} is {}".format(n,bin(n)[2:]))
+        
