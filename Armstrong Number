@@ -1,0 +1,14 @@
+print("           -----------------     WELCOME     ---------------         ")
+n=int(input("Enter the number "))
+temp=n
+num=len(str(n))
+s=0
+while temp > 0:
+    digit = temp % 10
+    s += digit ** num
+    temp //= 10
+if n==s:
+    print("The number {} is Armstrong".format(n))
+else:
+    print("The number {} is not Armstrong".format(n))
+    
