@@ -1,0 +1,5 @@
+import calendar
+year = int(input("Enter the year you want the calander of: "))
+for i in range(1 ,13):
+    month = i
+    print(calendar.month(year,month))
