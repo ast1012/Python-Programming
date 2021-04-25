@@ -1,0 +1,12 @@
+# nth whole number
+n = int(input("Enter the number n-->"))
+flag =0
+lst =[2,]
+for i in range(3,1000):
+    for x in range(2,i):
+        rem = i%x
+        if i%x==0:  #checking whether number is prime
+            break
+    else:
+        lst.append(i)  #adding the prime number to the list
+print(lst[n-1])
